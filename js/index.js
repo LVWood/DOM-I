@@ -39,4 +39,26 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const navBar = document.querySelectorAll('a');
+//console.log(navBar);
+navBar[0].textContent = 'Services';
+navBar[1].textContent = 'Product';
+navBar[2].textContent = 'Vision';
+navBar[3].textContent = 'Features';
+navBar[4].textContent = 'About';
+navBar[5].textContent = 'Contact';
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = 'file:///C:/Users/lesle/Documents/CODE%20PROJECTS/DOM-I/img/header-img.png';
+headerImg.alt = 'Circular image of code floating against a black background.';
+
+const ctaText = document.querySelector('.cta-text h1');
+//console.log(ctaText);
+ctaText.textContent = 'Dom is awesome';
+ctaText.style.justifyContent = 'center';
+
+const ctaBtn = document.querySelector('button');
+//console.log(ctaBtn);
+ctaBtn.textContent = 'Get Started';
