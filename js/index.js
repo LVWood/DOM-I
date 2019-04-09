@@ -42,13 +42,31 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 const navBar = document.querySelectorAll('a');
-//console.log(navBar);
 navBar[0].textContent = 'Services';
 navBar[1].textContent = 'Product';
 navBar[2].textContent = 'Vision';
 navBar[3].textContent = 'Features';
 navBar[4].textContent = 'About';
 navBar[5].textContent = 'Contact';
+
+navBar.forEach(function(currentValue) {
+  currentValue.style.color = 'green';
+});
+
+// newNavBar = Array.from(navBar);
+// console.log(newNavBar);
+const parentNav = document.querySelector('nav');
+console.log(parentNav);
+
+const newATag = document.createElement('a');
+const anotherNewATag = document.createElement('a');
+parentNav.appendChild(newATag);
+parentNav.appendChild(anotherNewATag);
+anotherNewATag.textContent = 'Go Fish';
+newATag.textContent = 'Eucher';
+
+
+
 
 const headerImg = document.querySelector('#cta-img');
 headerImg.src = 'file:///C:/Users/lesle/Documents/CODE%20PROJECTS/DOM-I/img/header-img.png';
