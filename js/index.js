@@ -39,4 +39,78 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const navBar = document.querySelectorAll('a');
+navBar[0].textContent = 'Services';
+navBar[1].textContent = 'Product';
+navBar[2].textContent = 'Vision';
+navBar[3].textContent = 'Features';
+navBar[4].textContent = 'About';
+navBar[5].textContent = 'Contact';
+
+navBar.forEach(function(currentValue) {
+  currentValue.style.color = 'green';
+});
+
+// newNavBar = Array.from(navBar);
+// console.log(newNavBar);
+const parentNav = document.querySelector('nav');
+console.log(parentNav);
+
+const newATag = document.createElement('a');
+const anotherNewATag = document.createElement('a');
+parentNav.appendChild(newATag);
+parentNav.appendChild(anotherNewATag);
+anotherNewATag.textContent = 'Go Fish';
+newATag.textContent = 'Eucher';
+
+
+
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = 'file:///C:/Users/lesle/Documents/CODE%20PROJECTS/DOM-I/img/header-img.png';
+headerImg.alt = 'Circular image of code floating against a black background.';
+
+const ctaText = document.querySelector('.cta-text h1');
+//console.log(ctaText);
+ctaText.textContent = 'Dom is awesome';
+//ctaText.style.justifyContent = 'center';
+// trying to fix word placement, haven't gotten it yet.
+
+const ctaBtn = document.querySelector('button');
+//console.log(ctaBtn);
+ctaBtn.textContent = 'Get Started';
+
+const mainContentHeaders = document.querySelectorAll('.text-content h4');
+//console.log(mainContentHeaders);
+mainContentHeaders[0].textContent = 'Features';
+mainContentHeaders[1].textContent = 'About';
+mainContentHeaders[2].textContent = 'Services';
+mainContentHeaders[3].textContent = 'Product';
+mainContentHeaders[4].textContent = 'Vision';
+
+const mainContentPtags = document.querySelectorAll('.text-content p');
+//console.log(mainContentPtags);
+mainContentPtags[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+mainContentPtags[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+mainContentPtags[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+mainContentPtags[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+mainContentPtags[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const midPageImg = document.querySelector('.middle-img');
+midPageImg.src = 'file:///C:/Users/lesle/Documents/CODE%20PROJECTS/DOM-I/img/mid-page-accent.jpg';
+midPageImg.alt = 'Graphic of glowing code against a blue and black background.';
+
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = 'Contact';
+
+const contactInfo = document.querySelectorAll('.contact p');
+//console.log(contactInfo);
+contactInfo[0].textContent = '123 Way 456 Street \r\n' //tried several things to do a carriage return, haven't gotten it yet.
+contactInfo[0].textContent += 'Somewhere, USA';
+contactInfo[1].textContent = '1 (888) 888-8888';
+contactInfo[2].textContent = 'sales@greatidea.io'; 
+
+const footer = document.querySelector('footer p');
+footer.textContent = 'Copyright Great Idea! 2018';
